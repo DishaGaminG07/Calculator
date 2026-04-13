@@ -7,10 +7,10 @@ import javax.swing.border.LineBorder;
 public class Calculator {
     int boardWidth = 360;
     int boardHeight = 540;
-    Color customLightGray = new Color(127, 166, 212);
-    Color customDarkGray = new Color(27, 39, 171);
+    Color customLightBlue = new Color(127, 166, 212);
+    Color customDarkBlue = new Color(27, 39, 171);
     Color customBlack = new Color(28, 28, 28);
-    Color customOrange = new Color(255, 38, 168);
+    Color customPink = new Color(255, 38, 168);
     String[] buttonValues = { "AC", "+/-", "%", "÷", "7", "8", "9", "×", "4", "5", "6", "-", "1", "2", "3", "+", "0", ".", "DEL", "=" };
     String[] rightSymbols = {"÷", "×", "-", "+", "="};
     String[] topSymbols = {"AC", "+/-", "%", "DEL"};
@@ -51,17 +51,17 @@ public class Calculator {
             button.setBorder(new LineBorder(customBlack));
             if (Arrays.asList(topSymbols).contains(buttonValue)) {
                 if (buttonValue == "DEL") {
-                    button.setBackground(customDarkGray);
+                    button.setBackground(customDarkBlue);
                     button.setForeground(Color.white);
                 } else {
-                    button.setBackground(customLightGray);
+                    button.setBackground(customLightBlue);
                     button.setForeground(customBlack);
                 }
             } else if (Arrays.asList(rightSymbols).contains(buttonValue)) {
-                button.setBackground(customOrange);
+                button.setBackground(customPink);
                 button.setForeground(Color.white);
             } else {
-                button.setBackground(customDarkGray);
+                button.setBackground(customDarkBlue);
                 button.setForeground(Color.white);
             }
             buttonsPanel.add(button);
